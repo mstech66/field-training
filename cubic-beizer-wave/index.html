@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Demo</title>
+    <script type="text/javascript">
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+    </script>
+    <style type="text/css">
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .waveOne {
+            background-image: url("01.png");
+            background-repeat: repeat-x;
+            position: absolute;
+            bottom: 0;
+            width: 4592px;
+            height: 180px;
+            animation: waveOne 5s cubic-bezier(0.35, 0.45, 0.65, 0.25) infinite;
+            -webkit-transform: translate3d(0, 0, 0);
+            /*For HW Acceleration*/
+            transform: translate3d(0, 0, 0);
+        }
+        
+        .waveTwo {
+            background-image: url("02.png");
+            background-repeat: repeat-x;
+            animation: waveTwo 5s cubic-bezier(0.24, 0.67, 0.5, 0.46) infinite;
+            transform: translate3d(0, 0, 0);
+        }
+        
+        @keyframes waveTwo {
+            0% {
+                margin-left: -2396px;
+            }
+            100% {
+                margin-left: -100px;
+            }
+        }
+        
+        @keyframes waveOne {
+            0% {
+                margin-left: -100px;
+            }
+            100% {
+                margin-left: -2396px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="waves">
+        <div class="waveOne"></div>
+        <div class="waveOne waveTwo"></div>
+    </div>
+</body>
+
+</html>
