@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Demo New</title>
+    <style type="text/css">
+        body {
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            color: white;
+        }
+        
+        .navbar {
+            background-color: #1976D2;
+        }
+        
+        .navbar-default .navbar-nav>li>a {
+            color: white;
+        }
+        
+        #image {
+            height: 50px;
+            width: 100px;
+        }
+        
+        .navbar-brand-centered {
+            position: absolute;
+            left: 50%;
+            display: block;
+            width: 160px;
+            text-align: center;
+            background-color: #1976D2;
+        }
+        
+        .navbar>.container .navbar-brand-centered,
+        .navbar>.container-fluid .navbar-brand-centered {
+            margin-left: -80px;
+            color: white;
+        }
+        /*CSS for Animation Strats Here!*/
+        
+        #main,
+        #main1,
+        #main2 {
+            text-align: center;
+            vertical-align: middle;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 20px;
+            border-color: #0D47A1;
+            display: inline;
+            padding-left: auto;
+            padding-right: auto;
+        }
+        
+        #main1 {
+            width: 400px;
+            height: 400px;
+        }
+        
+        #main2 {
+            width: 180px;
+            height: 180px;
+            border-width: 15px;
+        }
+        
+        #img1,
+        #img2,
+        #img3,
+        #img4,
+        #img5,
+        #img6,
+        #img7,
+        #img8,
+        #img9 {
+            text-align: center;
+            vertical-align: middle;
+            display: none;
+            padding-right: 20px;
+            z-index: 100;
+        }
+        
+        #img1 {
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            float: left;
+            position: absolute;
+        }
+        
+        #img3 {
+            z-index: 1;
+            top: 0px;
+            right: 0px;
+            float: right;
+            position: absolute;
+        }
+        
+        #img7 {
+            z-index: 1;
+            bottom: 0px;
+            left: 0px;
+            float: left;
+            position: absolute;
+        }
+        
+        #img9 {
+            z-index: 1;
+            bottom: 0px;
+            right: 0px;
+            float: right;
+            position: absolute;
+        }
+        
+        #first,
+        #second,
+        #third {
+            width: 100%;
+            vertical-align: middle;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        
+        .col-sm-12 {
+            width: 100%;
+            height: 600px;
+        }
+        
+        .row {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+        }
+        /*CSS for Animation Ends Here*/
+        /*Footer CSS*/
+        
+        #footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #2196F3;
+            color: black;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        
+        #row1,
+        #row1>a {
+            color: white;
+            font-size: 20px;
+        }
+        
+        #row2,
+        #row2>a {
+            color: #E0E0E0;
+            font-size: 18px;
+        }
+        
+        #lastfoot {
+            font-size: 20px;
+            color: white;
+            background: rgba(0, 0, 0, .5);
+            text-align: center;
+            padding-top: 30px;
+        }
+        
+        .more {
+            cursor: pointer;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Script for Animation -->
+    <script>
+        $(document).ready(function() {
+            $("#img5").attr("border-width", "0px");
+            $("#img5").fadeIn(3000, center()); // fadeIn effect for the center image
+            function center() {
+                $("#img5").attr("border-width", "50px");
+                $("#img5").fadeIn("slow");
+            };
+            $("#img1").css("display", "inline"); //for the image no 1 in the first row
+            $("#img1").animate({
+                right: '500px',
+                top: '20px'
+            }, 1000); //for the image no 1 in the first row
+            $("#img3").css("display", "inline"); //for the image no 2 in the first row
+            $("#img3").animate({
+                left: '500px',
+                top: '50px'
+            }, 1500); //for the image no 2 in the first row
+            $("#img7").css("display", "inline"); //for the image no 4 in the first row
+            $("#img7").animate({
+                right: '450px',
+                top: '45%'
+            }, 2000); //for the image no 4 in the first row
+            $("#img9").css("display", "inline"); //for the image no 4 in the first row
+            $("#img9").animate({
+                left: '450px',
+                top: '50%'
+            }, 2500); //for the image no 4 in the first row
+            function scrollTop() {
+                document.body.scrollTop = 0;
+            }
+        });
+    </script>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+		        <!-- <span class="sr-only">Toggle navigation</span> -->
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+                <div class="navbar-brand navbar-brand-centered">Hello!</div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-brand-centered">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Downloads</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">What's New!</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Animation Div -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="first">
+                <div id="img1"><img src="user2.png" id="main"></div>
+                <div id="img2">&nbsp</div>
+                <div id="img3"><img src="user3.png" id="main2"></div>
+            </div>
+            <div id="second">
+                <div id="img4"><img src="user1.png" id="main"></div>
+                <div id="img5">
+                    <img src="user1.png" id="main1">
+                    <!--image in center-->
+                </div>
+                <div id="img6"><img src="user1.png" id="main"></div>
+            </div>
+            <div id="third">
+                <div id="img7"><img src="user4.png" id="main"></div>
+                <div id="img8"><img src="user1.png" id="main"></div>
+                <div id="img9"><img src="user5.png" id="main"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Ending of Animation Div -->
+    <div id="footer">
+        <div class="row">
+            <div class="col-sm-4" id="firstfoot"></div>
+            <div class="col-sm-4" id="firstfoot">
+                <div class="row">
+                    <!-- 1st row -->
+                    &nbsp
+                </div>
+                <div class="row" style="padding-top: 50px;">
+                    <!-- 2nd row -->
+                    <!-- For Social Media -->
+                    <div class="col-sm-2">&nbsp</div>
+                    <div class="col-sm-2">
+                        <a href="#social"><img src="social1.png" width="40px" height="40px"></a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#social"><img src="social2.png" width="40px" height="40px"></a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#social"><img src="social3.png" width="40px" height="40px"></a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#social"><img src="social4.png" width="40px" height="40px"></a>
+                    </div>
+                    <div class="col-sm-2">&nbsp</div>
+                </div>
+                <div class="row" style="padding-top: 10px;" id="row1">
+                    <!-- 3rd row -->
+                    <!-- Ghisepite Links yahan pe latkenge -->
+                    &nbsp&nbsp<a href="#home">Home</a>&nbsp|&nbsp<a href="#menu">Menu</a>&nbsp|&nbsp<a href="#support">Support</a>&nbsp|&nbsp<a href="#help">Help</a>&nbsp|&nbsp<a href="#contact">Contact</a>&nbsp&nbsp
+                </div>
+                <div class="row" style="padding-top: 10px;padding-bottom: 40px;" id="row2">
+                    <!-- 4th row -->
+                    <!-- Ye sirf show off karne ke liye likh raha hu -->
+                    &nbsp&nbsp<a href="#locations">Locations</a>&nbsp|&nbsp<a href="#blog">Blog</a>&nbsp|&nbsp<a href="#answers">Answers</a>&nbsp|&nbsp<a href="#find">Find</a>&nbsp&nbsp
+                </div>
+                <div class="row">
+                    <!-- 5th row -->
+                    &nbsp
+                </div>
+            </div>
+            <div class="col-sm-4" id="firstfoot">
+                <form><input type="image" src="scroll.png" width="90px" height="90px" class="more" /></form>
+            </div>
+        </div>
+        <div class="row" id="lastfoot">
+            <div>
+                <p>Field Training in a Nutshell! Made with Love (^^)</p>
+            </div>
+            <div>
+                <p>All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
